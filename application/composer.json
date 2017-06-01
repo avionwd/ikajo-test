@@ -1,0 +1,28 @@
+{
+  "name": "avionwd/ikajo-test",
+  "description": "This is test project to find a job",
+  "license": "MIT",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Oleksandr Muzychenko",
+      "email": "avionwd@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "~7.0",
+    "ext-phalcon": "~3.1",
+    "fzaninotto/faker": "*",
+    "m1ome/phalcon-datatables": "1.*",
+    "phalcon-ext/mailer": "~2.0",
+    "giggsey/libphonenumber-for-php": "~8.5.0"
+  },
+  "require-dev": {
+    "phalcon/devtools": "~3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "app\\": "."
+    }
+  }
+}

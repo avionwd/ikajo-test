@@ -1,0 +1,6 @@
+{
+  "migration" : {
+    "migrations": "Migrations",
+    "config": "Configs/config.php"
+  }
+}
