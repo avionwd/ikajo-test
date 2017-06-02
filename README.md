@@ -28,4 +28,11 @@ To start application and run containers in the background, use following command
 docker-compose up -d
 ```
 
-Open application in your favorite browser [http://127.0.0.1](http://127.0.0.1) 
+After 5 minutes open application in your favorite browser via link: [http://127.0.0.1](http://127.0.0.1) 
+
+## Troubleshooting
+
+Running containers can take some time to check the status you can view the logs using the command:
+```
+docker-compose logs
+```
