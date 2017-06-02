@@ -13,11 +13,10 @@ Clone this repository:
 git clone https://github.com/avionwd/ikajo-test.git 
 ```
 
-Install required libraries with composer:
+Prepare environment variables for containers with following command inside project root:
 ```
-composer install
-```
-NOTE! Composer not included into this repo, it must be installed on you local machine. See [composer install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) instructions. 
+cp variables.env.example variables.env
+``` 
 
 Build the containers with following command inside project root:
 ```
