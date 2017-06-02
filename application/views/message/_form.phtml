@@ -1,0 +1,18 @@
+<?php
+/**
+ * ${NAME} file
+ *
+ * @author Oleksandr Muzychenko <avionwd@gmail.com>
+ */
+
+/**
+ * @var $this Phalcon\Mvc\View\Engine\Php
+ * @var $form app\forms\MessageForm
+ */
+
+?><form id="message_form" action="<?= $this->request->getURI() ?>" method="post">
+    <?= $form->renderDecorated('name') ?>
+    <?= $form->renderDecorated('phone') ?>
+    <?= $form->renderDecorated('email') ?>
+    <?= $form->renderDecorated('message') ?>
+</form>

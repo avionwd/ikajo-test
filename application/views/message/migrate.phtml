@@ -1,0 +1,31 @@
+<?php
+/**
+ * ${NAME} file
+ *
+ * @author Oleksandr Muzychenko <avionwd@gmail.com>
+ */
+
+/**
+ * @var $this Phalcon\Mvc\View\Engine\Php
+ */
+
+?><div class="row">
+    <div class="col-md-12">
+        <div class="alert alert-info">
+            <h4>Migration required</h4>
+            <a href="<?= $this->url->get('/message/migrate', ['start' => 1])?>" class="btn btn-primary">
+                Run migration
+            </a>
+        </div>
+    </div>
+</div>
+<?php if (isset($output)) { ?>
+    <div class="row">
+        <div class="col-md-12">
+            <pre><?= $output; ?></pre>
+            <p>
+                <a href="<?= $this->url->get('/') ?>" class="btn btn-success">Return to messages</a>
+            </p>
+        </div>
+    </div>
+<?php } ?>

@@ -1,0 +1,59 @@
+<?php
+/**
+ * ${NAME} file
+ *
+ * @author Oleksandr Muzychenko <avionwd@gmail.com>
+ */
+
+/**
+ * @var $this Phalcon\Mvc\View\Engine\Php
+ * @var $grid app\grids\MessageGrid
+ */
+
+$this->assets->addCss('https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css');
+$this->assets->addCss('https://cdn.datatables.net/buttons/1.3.1/css/buttons.bootstrap.min.css');
+$this->assets->addCss('https://cdn.datatables.net/select/1.2.2/css/select.bootstrap.min.css');
+
+$this->assets->addJs('https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js');
+$this->assets->addJs('https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js');
+$this->assets->addJs('https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js');
+$this->assets->addJs('https://cdn.datatables.net/buttons/1.3.1/js/buttons.bootstrap.min.js');
+$this->assets->addJs('https://cdn.datatables.net/select/1.2.2/js/dataTables.select.min.js');
+
+$this->assets->addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js');
+$this->assets->addJs('/assets/js/messages.js');
+
+?><div class="row">
+    <div class="col-md-12">
+        <table id="messages" class="table table-stripped table-bordered" data-source="<?= $this->url->get('/message') ?>">
+            <thead>
+                <tr>
+                    <th data-data="id" data-searchable="false">ID</th>
+                    <th data-data="name" data-searchable="true">Name</th>
+                    <th data-data="phone" data-searchable="true">Phone</th>
+                    <th data-data="email" data-searchable="true">Email</th>
+                    <th data-data="message" data-searchable="true">Message</th>
+                    <th data-data="date_create" data-searchable="false">Created</th>
+                    <th data-data="date_update" data-searchable="false">Updated</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<div id="message_modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Message</h4>
+            </div>
+            <div class="modal-body" id="message_form_container">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" form="message_form" value="Save">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
